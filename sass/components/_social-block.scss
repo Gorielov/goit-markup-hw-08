@@ -1,0 +1,36 @@
+.social__list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+%social__links {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: color 250ms var(--animation), background-color 250ms var(--animation);
+    &:hover,
+    &:focus {
+        color: var(--primary-white-color);
+        background-color: var(--accent-color);
+    }
+}
+
+.social__links--team {
+    @extend %social__links;
+    color: var(--icon-color);
+}
+
+.social__links--footer {
+    @extend %social__links;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--primary-white-color);
+}
+
+.social__icons {
+    fill: currentColor;
+    transition: fill 250ms var(--animation);
+}
