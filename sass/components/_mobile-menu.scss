@@ -1,0 +1,28 @@
+
+.mobile-menu {
+    display: none;
+    @media screen and(min-width:$tablet) {
+        display: none;
+    }
+    // display: flex;
+    // align-items: flex-end;
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    background-color: white;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    &__item{
+        margin-bottom: 32px;
+    }
+    &__link {
+        color: var(--headers-text-color);
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+    }
+
+}

@@ -1,6 +1,8 @@
 .header {
     &__section {
-    padding-top: 24px;
+    @media screen and(min-width:$tablet) {
+        padding-top: 24px;
+    }
     margin-bottom: 0;
     border-bottom: 1px solid #ececec;
     }
@@ -8,59 +10,134 @@
     &__conteiner {
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     &__nav {
         display: flex;
+        
+        @media screen and(max-width:$tablet) {
+           // width: 100%;
+            //align-items: center;
+            position: relative;
+        }
     }
 
-    &__menu {
+
+    &__button {
+        @media screen and(min-width:$tablet) {
+            display: none;
+        }
         display: flex;
-        margin-left: 94px;
+        align-items: center;
+        background-color: var(--primary-white-color);
+        border:none;
+        margin-left: auto;
+    }
+
+    &__menu-icon {
+        fill: var(--headers-text-color);
+    }
+
+
+    &__menu {
+        @media screen and(max-width:$tablet) {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            right: 0px;
+        }
+        @media screen and(min-width:$tablet) {
+                display: flex;
+                margin-left: 88px;
+            }
+        @media screen and(min-width:$desktop) {
+            display: flex;
+            margin-left: 93px;
+        }
+        @media screen and(min-width:$tablet)and(max-width:$desktop) {
+            margin-right: 90px;
+        }
     }
 
     &__item {
         display: block;
-        &:not(:last-child) {
-            margin-right: 50px;
+        @media screen and(min-width:$tablet) {
+            &:not(:last-child) {
+                margin-right: 50px;
+            }
         }
     }
+    
     &__link {
+        
         display: block;
         position: relative;
-        padding-bottom: 28px;
         color: var(--headers-text-color);
         font-weight: 500;
         letter-spacing: 0.02em;
         padding-top: 8px;
         padding-bottom: 32px;
+        @media screen and(max-width:$tablet) {
+                background-color: white;
+                padding-top: 0px;
+                font-size: 40px;
+            }
     }
+
+        // @media screen and(max-width:$tablet) {
+        //     background-color: white;
+        //     font-size: 40px;
+        //     color: var(--accent-color);
+
+        //     &:nth-child(2) {
+        //         font-size: 28px;
+        //         color: var(--primary-text-color);
+        //     }
+
+        // }
+            // @media screen and(max-width:$tablet) {
+            //     position: absolute;
+            //     width: 100%;
+            //     bottom: 0px;
+            //     right: 0px;
 }
 
 
-.current::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -1px;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--accent-color);
-}
+// .current::after {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     bottom: -1px;
+//     width: 100%;
+//     height: 4px;
+//     border-radius: 2px;
+//     background-color: var(--accent-color);
+// }
 
 .contacts {
-    display: flex;
-    margin-left: auto;
+    @media screen and(min-width:$tablet) {
+        display: flex;
+        margin-left: auto;
+    }
+        @media screen and(min-width:$tablet)and(max-width:$desktop) {
+            flex-direction: column;
+            gap: 10px;
+        }
+    display: none;
 
 
     &__link {
         color: var(--primary-text-color);
         font-weight: 500;
         letter-spacing: 0.02em;
-        padding-top: 8px;
-        padding-bottom: 32px;
         display: flex;
+        @media screen and(min-width:$desktop) {
+            padding-top: 8px;
+            padding-bottom: 32px;
+        }
     }
 
     &__icons {

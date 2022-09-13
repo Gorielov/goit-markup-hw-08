@@ -1,27 +1,67 @@
 .hero {
     &__overlay {
-        max-width: 1600px;
-        height: 600px;
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Overlay.jpg);
+        padding-top: 118px;
+        padding-bottom: 118px;
+        height: 400px;
+        @media screen and(min-width:768.98px) {
+            max-width: 1600px;
+            height: 600px;
+            padding-top: 200px;
+            padding-bottom: 200px;
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/desktop/overlay.jpg');
+            @media (min-device-pixel-ratio: 2),
+                (-webkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                background-image: url('../images/desktop/overlay@2x.jpg');
+                }
+        }
+        @media screen and(min-width:480.98px) and(max-width:768px) {
+            max-width: 768px;
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/tablet/overlay.jpg');
+                @media (min-device-pixel-ratio: 2),
+                (-webkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/tablet/overlay@2x.jpg');
+                }
+        }
+
+        @media screen and(max-width:480.98px) {
+            max-width: 480px;
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/mobile/overlay.jpg');
+            
+                @media (min-device-pixel-ratio: 2),
+                (-webkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/mobile/overlay@2x.jpg');
+                }
+        }
+
         background-position: center;
         background-repeat: no-repeat;
         background-color: var(--back-color);
-        padding-top: 200px;
-        padding-bottom: 200px;
         margin-right: auto;
         margin-left: auto;
     }
 
     &__title {
-        max-width: 696px;
         color: var(--primary-white-color);
-        font-size: 44px;
+        font-size: 26px;
         font-weight: 900;
-        line-height: 1.36;
+        line-height: 1.61;
+        max-width: 360px;
         letter-spacing: 0.06em;
         text-transform: uppercase;
         text-align: center;
         margin-right: auto;
         margin-left: auto;
+
+        @media screen and(min-width:$desktop) {
+            max-width: 696px;
+            font-size: 44px;
+            line-height: 1.36;
+        }
     }
 }
