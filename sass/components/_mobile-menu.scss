@@ -1,22 +1,26 @@
 
-.mobile-menu {
+.m-menu {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
     @media screen and(min-width:$tablet) {
         display: none;
     }
-    // display: flex;
-    // align-items: flex-end;
-    position: absolute;
+    position: fixed;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     background-color: white;
     top: 0px;
     left: 0px;
     padding-top: 48px;
     padding-bottom: 48px;
     padding-left: 40px;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+
+    &.is-open {
+        transform: translateX(0);
+    }
 
     &__item{
         margin-bottom: 32px;
@@ -88,6 +92,7 @@
             width: 40px;
             height: 40px;
             border: none;
+            background-color: var(--primary-white-color);
             color: var(--headers-text-color);
             cursor: pointer;
     

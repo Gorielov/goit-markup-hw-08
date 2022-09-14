@@ -21,6 +21,10 @@ img {
 }
 
 body {
+    // @media screen and(max-width:$tablet) {
+    //     overflow: hidden;
+        
+    // }
     background-color: var(--primary-white-color);
     color: var(--headers-text-color);
 

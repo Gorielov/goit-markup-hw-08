@@ -511,70 +511,75 @@ body {
   }
 }
 
-.mobile-menu {
+.m-menu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   background-color: white;
   top: 0px;
   left: 0px;
   padding-top: 48px;
   padding-bottom: 48px;
   padding-left: 40px;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
 }
 @media screen and (min-width: 767.98px) {
-  .mobile-menu {
+  .m-menu {
     display: none;
   }
 }
-.mobile-menu__item {
+.m-menu.is-open {
+  transform: translateX(0);
+}
+.m-menu__item {
   margin-bottom: 32px;
 }
-.mobile-menu__link {
+.m-menu__link {
   color: var(--headers-text-color);
   font-size: 40px;
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.02em;
 }
-.mobile-menu__current {
+.m-menu__current {
   color: var(--accent-color);
 }
-.mobile-menu__contacts {
+.m-menu__contacts {
   margin-bottom: 64px;
 }
-.mobile-menu__c-item:not(:last-child) {
+.m-menu__c-item:not(:last-child) {
   margin-bottom: 32px;
 }
-.mobile-menu__phone {
+.m-menu__phone {
   color: var(--accent-color);
   font-size: 34px;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
-.mobile-menu__email {
+.m-menu__email {
   color: var(--primary-text-color);
   font-size: 24px;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
-.mobile-menu__social-list {
+.m-menu__social-list {
   display: flex;
 }
-.mobile-menu__social-item:not(:first-child) {
+.m-menu__social-item:not(:first-child) {
   padding-left: 10px;
 }
-.mobile-menu__social-item:not(:last-child) {
+.m-menu__social-item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   padding-right: 10px;
 }
-.mobile-menu__social-link {
+.m-menu__social-link {
   color: var(--accent-color);
 }
-.mobile-menu__close-button {
+.m-menu__close-button {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -584,13 +589,14 @@ body {
   width: 40px;
   height: 40px;
   border: none;
+  background-color: var(--primary-white-color);
   color: var(--headers-text-color);
   cursor: pointer;
 }
-.mobile-menu__close-button:hover, .mobile-menu__close-button:focus {
+.m-menu__close-button:hover, .m-menu__close-button:focus {
   color: var(--accent-color);
 }
-.mobile-menu__close-icon {
+.m-menu__close-icon {
   fill: currentColor;
 }
 
@@ -613,6 +619,7 @@ body {
 }
 @media screen and (max-width: 767.98px) {
   .header__nav {
+    align-items: center;
     position: relative;
   }
 }
