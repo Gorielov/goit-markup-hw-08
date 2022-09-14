@@ -12,19 +12,20 @@
 
     &__item {
         margin-bottom: 30px;
+        @media screen and(min-width:$mobile) and(max-width:$tablet) {
+            margin: 0px;
+        } 
+        @media screen and(min-width:$tablet) and(max-width:$desktop) {
+            margin-bottom: 0px;
+            width: calc((100% - 30px) / 2);
+        }
         @media screen and(min-width:$desktop) {
             max-width: 270px;
             margin-bottom: 0px;
+
             &:not(:last-child) {
                 margin-right: 30px;
             }
-        }
-        @media screen and(min-width:$mobile) and(max-width:$tablet) {
-            margin: 0px;
-            //max-width: 450px;
-        } 
-          @media screen and(min-width:$tablet) and(max-width:$desktop) {
-           width: calc((100% - 30px) / 2);
         }
     }
 

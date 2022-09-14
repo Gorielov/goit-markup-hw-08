@@ -95,8 +95,9 @@ body.scroll-lock {
     font-size: 28px;
 	font-weight: 700;
 	line-height: 1.17;
-	margin-bottom: 50px;
+    margin-bottom: 30px;
     @media screen and(min-width:$desktop) {
             font-size: 36px;
+            margin-bottom: 50px;
         }
 }

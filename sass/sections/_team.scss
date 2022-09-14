@@ -23,15 +23,18 @@
         width: 100%;
     }
 
+    @media screen and(min-width:$tablet) and(max-width:$desktop) {
+        width: calc((100% - 30px) / 2);
+        margin-bottom: 0px;
+    }
+
     @media screen and(min-width:$desktop) {
         padding-bottom: 30px;
         margin-bottom: 0px;
+
         &:not(:last-child) {
             margin-right: 30px;
         }
-    }
-    @media screen and(min-width:$tablet) and(max-width:$desktop) {
-        width: calc((100% - 30px) / 2);
     }
 }
 
