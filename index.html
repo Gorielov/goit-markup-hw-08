@@ -20,6 +20,11 @@
 					</svg>
 				</button>
 				<div class="mobile-menu">
+					<a href="" class="mobile-menu__close-button" aria-label="Кнопка Закрити">
+						<svg class="mobile-menu__close-icon" width="11px" height="11px">
+							<use href="./images/icons.svg#close"></use>
+						</svg>
+					</a>
 					<ul class="mobile-menu__list">
 						<li class="mobile-menu__item"><a class="link mobile-menu__link mobile-menu__current"
 								href="./index.html">Студія</a></li>
@@ -27,9 +32,34 @@
 								href="./portfolio.html">Портфоліо</a></li>
 						<li class="mobile-menu__item"><a class="link mobile-menu__link" href="#">Контакти</a></li>
 					</ul>
-					<a href="https://facebook.com" class="header__social">Facebook</a>
-					|
-					<a href="https://instagram.com" class="header__social">Instagram</a>
+					<div class="mobile-menu__wrapper">
+						<ul class="mobile-menu__contacts">
+							<li class="mobile-menu__c-item">
+								<a href="tel:+380961111111" class="link mobile-menu__phone">
+									<span>+38 096 111 11 11</span>
+								</a>
+							</li>
+							<li class="mobile-menu__c-item">
+								<a href="mailto:info@devstudio.com" class="link mobile-menu__email">
+									<span>info@devstudio.com</span>
+								</a>
+							</li>
+						</ul>
+						<ul class="mobile-menu__social-list">
+							<li class="mobile-menu__social-item">
+								<a href="https://instagram.com" class="mobile-menu__social-link link">Instagram</a>
+							</li>
+							<li class="mobile-menu__social-item">
+								<a href="https://twitter.com" class="mobile-menu__social-link link">Twitter</a>
+							</li>
+							<li class="mobile-menu__social-item">
+								<a href="https://facebook.com" class="mobile-menu__social-link link">Facebook</a>
+							</li>
+							<li class="mobile-menu__social-item">
+								<a href="https://linkedln.com" class="mobile-menu__social-link link">Linkedln</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 				<ul class="header__menu">
 					<li class="header__item"><a class="link header__link current" href="./index.html">Студія</a></li>
@@ -477,7 +507,7 @@
 
 	<!-- Modal window -->
 
-	<!-- <div class="backdrop is-hidden" data-modal>
+	<div class="backdrop is-hidden" data-modal>
 		<div class="modal">
 			<a href="" class="modal__close-button" aria-label="Кнопка Закрити" data-modal-close>
 				<svg class="modal__close-icon" width="11px" height="11px">
@@ -531,7 +561,7 @@
 				</div>
 			</form>
 		</div>
-	</div> -->
+	</div>
 
 	<script src="./js/mobile-menu.js"></script>
 	<script src="./js/modal.js"></script>

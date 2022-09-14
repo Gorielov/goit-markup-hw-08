@@ -106,16 +106,18 @@
 }
 
 
-// .current::after {
-//     content: "";
-//     display: block;
-//     position: absolute;
-//     bottom: -1px;
-//     width: 100%;
-//     height: 4px;
-//     border-radius: 2px;
-//     background-color: var(--accent-color);
-// }
+.current::after {
+    @media screen and(min-width:$tablet) {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+    }
+}
 
 .contacts {
     @media screen and(min-width:$tablet) {

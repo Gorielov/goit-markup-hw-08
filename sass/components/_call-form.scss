@@ -112,17 +112,25 @@
 }
 
 .call-form__text {
+    font-size: 12px;
     display: inline-flex;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
     margin-top: 2px;
     margin-right: 3px;
+    @media screen and(min-width:$desktop) {
+        font-size: 14px;
+    }
 }
 
 .call-form__link {
+    font-size: 12px;
     color: var(--accent-color);
     text-decoration: none;
     letter-spacing: 0.03em;
     border-bottom: 1px solid var(--accent-color);
     margin-top: 3px;
+    @media screen and(min-width:$desktop) {
+        font-size: 14px;
+    }
 }
