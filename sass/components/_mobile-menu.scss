@@ -7,6 +7,7 @@
         display: none;
     }
     position: fixed;
+    z-index: 999;
     width: 100vw;
     height: 100vh;
     background-color: white;
@@ -20,6 +21,7 @@
 
     &.is-open {
         transform: translateX(0);
+        overflow: auto;
     }
 
     &__item{
@@ -52,6 +54,9 @@
         font-size: 34px;
         font-weight: 500;
         letter-spacing: 0.02em;
+        @media screen and(max-width:$mobile) {
+                font-size: 30px;
+            }
     }
 
     &__email {
@@ -64,6 +69,7 @@
 
     &__social-list {
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__social-item {
@@ -78,8 +84,13 @@
 
     }
 
-    &__social-link {
+        &__social-link {
         color: var(--accent-color);
+        text-decoration: none;
+        font-size: 18px;
+        @media screen and(max-width:$mobile){
+            font-size: 12px;
+        }
     }
 
     &__close-button {

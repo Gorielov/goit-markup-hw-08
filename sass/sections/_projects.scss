@@ -73,6 +73,9 @@
     }
 
     &__item {
+        @media screen and(max-width:$mobile) {
+            width: 100%;
+        }
         
         @media screen and(min-width:$tablet) and(max-width:$desktop) {
                 max-width: calc((100% - 30px) / 2);

@@ -16,15 +16,11 @@ ul {
 
 img {
     display: block;
-    max-width: 100;
+    max-width: 100%;
     height: auto;
 }
 
 body {
-    // @media screen and(max-width:$tablet) {
-    //     overflow: hidden;
-        
-    // }
     background-color: var(--primary-white-color);
     color: var(--headers-text-color);
 
@@ -33,6 +29,10 @@ body {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
+}
+
+body.scroll-lock {
+    overflow:hidden;
 }
 
 .visually-hidden {
